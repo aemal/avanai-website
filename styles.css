@@ -202,3 +202,25 @@ a { color: inherit; text-decoration: none; }
 /* Open mobile nav */
 .mobile-open .mobile-nav { display: flex; }
 
+/* How We Help */
+.how { background: var(--bg); padding: 88px 0; }
+.how-eyebrow { color: #8b5cf6; letter-spacing: .18em; text-align: center; }
+.how-title { text-align: center; margin: 6px 0 10px; font-size: clamp(28px, 4.6vw, 40px); }
+.how-subtitle { max-width: 900px; margin: 0 auto 34px; text-align: center; color: var(--muted); }
+
+.how-grid { display: grid; grid-template-columns: 1fr; gap: 34px; margin-top: 6px; }
+.how-card { display: grid; grid-template-columns: 72px 1fr; gap: 20px; align-items: start; background: transparent; border: 0; padding: 0; }
+/* The icon images already include a purple tile; render them as tiles without additional backgrounds */
+.how-icon { width: 72px; height: 72px; border-radius: 16px; overflow: hidden; display: grid; place-items: center; box-shadow: 0 10px 24px rgba(17,24,39,.06); }
+.how-icon img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.how-card-eyebrow { margin: 2px 0 6px; font-weight: 800; color: #111827; }
+.how-card-title { margin: 0 0 6px; color: #6c47ff; font-size: 20px; }
+.how-card-copy { margin: 0; color: #475569; }
+
+@media (min-width: 920px) {
+  .how { padding: 104px 0; }
+  .how-grid { grid-template-columns: repeat(2, 1fr); gap: 46px 48px; }
+  .how-card { grid-template-columns: 84px 1fr; }
+  .how-icon { width: 84px; height: 84px; border-radius: 18px; }
+}
+
