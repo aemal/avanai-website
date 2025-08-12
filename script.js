@@ -80,3 +80,45 @@ document.querySelectorAll('.mobile-nav a').forEach((link) => {
   form.addEventListener('submit', handleSubmit);
 })();
 
+// Vapi Voice Widget bootstrap (if meta tags are present)
+(() => {
+  const publicKey = document.querySelector('meta[name="vapi-public-key"]')?.getAttribute('content');
+  const assistantId = document.querySelector('meta[name="vapi-assistant-id"]')?.getAttribute('content');
+  if (!publicKey || !assistantId || publicKey.includes('YOUR_VAPI') || assistantId.includes('YOUR_VAPI')) {
+    return; // Not configured
+  }
+
+  // Create a floating button style matching site brand
+  const buttonConfig = {
+    position: 'bottom-right',
+    button: {
+      style: {
+        background: 'linear-gradient(135deg, #6c47ff 0%, #8b5cf6 100%)',
+        borderRadius: '22px',
+        padding: '12px 18px',
+        fontWeight: 800,
+        color: '#ffffff',
+        boxShadow: '0 10px 24px rgba(108,71,255,.35)'
+      },
+      text: 'Start voice chat'
+    },
+    panel: {
+      style: {
+        background: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
+        borderRadius: '16px',
+        border: '2px solid #e5e7eb',
+        backdropFilter: 'blur(8px)'
+      }
+    }
+  };
+
+  (function (d, t) {
+    var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+    g.src = 'https://cdn.jsdelivr.net/gh/VapiAI/html-script-tag@latest/dist/assets/index.js';
+    g.defer = true; g.async = true; s.parentNode.insertBefore(g, s);
+    g.onload = function () {
+      window.vapiSDK?.run({ apiKey: publicKey, assistant: assistantId, config: buttonConfig });
+    };
+  })(document, 'script');
+})();
+
