@@ -224,3 +224,15 @@ a { color: inherit; text-decoration: none; }
   .how-icon { width: 84px; height: 84px; border-radius: 18px; }
 }
 
+/* Band CTA */
+.band-cta { background: #f1f5f9; }
+.band-cta-inner { display: grid; grid-template-columns: 1fr; gap: 18px; align-items: center; padding: 48px 0; }
+.band-cta-title { margin: 0; font-size: clamp(26px, 4vw, 40px); }
+.band-cta-subtitle { margin: 8px 0 0; color: var(--muted); font-size: clamp(16px, 2.4vw, 20px); }
+.band-cta-button { justify-self: start; }
+
+@media (min-width: 920px) {
+  .band-cta-inner { grid-template-columns: 1fr auto; padding: 56px 0; }
+  .band-cta-button { justify-self: end; }
+}
+
