@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us — Avanai</title>
+    <meta name="description" content="Get in touch with Avanai to discuss your AI and automation needs. Let's transform your business together." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" href="../images/logo.png" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../" aria-label="Avanai home">
+          <img src="../images/logo.png" alt="Avanai" class="brand-logo" />
+        </a>
+        <nav class="main-nav" aria-label="Primary">
+          <a href="../#challenges">Challenges We Solve</a>
+          <a href="../#how">How We Help</a>
+          <a href="../#about">About Us</a>
+        </nav>
+        <a class="btn btn-primary header-cta" href="/contact">Get in Touch</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
+        <a href="../index.html#challenges">Challenges We Solve</a>
+        <a href="../index.html#how">How We Help</a>
+        <a href="../index.html#about">About Us</a>
+        <a class="btn btn-primary" href="index.html">Get in Touch</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-hero">
+        <div class="container contact-hero-inner">
+          <p class="eyebrow contact-eyebrow">Get in Touch</p>
+          <h1 class="contact-title">Let's Transform Your Business Together</h1>
+          <p class="contact-subtitle">
+            Ready to reimagine work with AI agents and automation? Share your details below, 
+            and we'll connect you with the right expert to discuss your specific needs.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-form-section">
+        <div class="container contact-form-container">
+          <div class="contact-form-wrapper">
+            <form class="contact-form" action="#" method="POST">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName" class="form-label">First Name *</label>
+                  <input type="text" id="firstName" name="firstName" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label for="lastName" class="form-label">Last Name *</label>
+                  <input type="text" id="lastName" name="lastName" class="form-input" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="position" class="form-label">Position *</label>
+                  <input type="text" id="position" name="position" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input type="email" id="email" name="email" class="form-input" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="organizationName" class="form-label">Organization Name *</label>
+                  <input type="text" id="organizationName" name="organizationName" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label for="organizationSize" class="form-label">Organization Size (Total Employees) *</label>
+                  <select id="organizationSize" name="organizationSize" class="form-select" required>
+                    <option value="">Select organization size</option>
+                    <option value="1-10">1-10 employees</option>
+                    <option value="11-50">11-50 employees</option>
+                    <option value="51-200">51-200 employees</option>
+                    <option value="201-500">201-500 employees</option>
+                    <option value="501-1000">501-1,000 employees</option>
+                    <option value="1001-5000">1,001-5,000 employees</option>
+                    <option value="5000+">5,000+ employees</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phoneNumber" class="form-label">Phone Number *</label>
+                  <input type="tel" id="phoneNumber" name="phoneNumber" class="form-input" placeholder="Your Phone Number" required>
+                </div>
+                <div class="form-group">
+                  <label for="linkedinProfile" class="form-label">LinkedIn Profile *</label>
+                  <input type="url" id="linkedinProfile" name="linkedinProfile" class="form-input" placeholder="https://linkedin.com/in/yourprofile" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message *</label>
+                <textarea id="message" name="message" class="form-textarea" rows="6" required placeholder="Tell us about your AI and automation challenges, goals, or questions. The more details you provide, the better we can help you."></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                <p class="form-note">We'll get back to you within 24 hours.</p>
+              </div>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-info-card">
+              <h3 class="contact-info-title">Ready to Get Started?</h3>
+              <p class="contact-info-description">
+                Our team of AI and automation experts is here to help you transform your business. 
+                Whether you're just starting your journey or looking to scale existing initiatives, 
+                we'll work with you to deliver measurable results.
+              </p>
+              
+              <div class="contact-highlights">
+                <div class="contact-highlight">
+                  <div class="contact-highlight-number">24h</div>
+                  <div class="contact-highlight-text">Response Time</div>
+                </div>
+                <div class="contact-highlight">
+                  <div class="contact-highlight-number">100%</div>
+                  <div class="contact-highlight-text">ROI in First Year</div>
+                </div>
+                <div class="contact-highlight">
+                  <div class="contact-highlight-number">Expert</div>
+                  <div class="contact-highlight-text">Consultation</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <h3 class="footer-title">Avanai GmbH</h3>
+          <p class="footer-description">Reimagine work. With AI agents and automation that delivers results, not surprises.</p>
+        </div>
+        <nav class="footer-col" aria-label="Company">
+          <h4 class="footer-heading">Company</h4>
+          <ul>
+            <li><a href="../index.html#about">About us</a></li>
+            <li><a href="index.html">Contact us</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Legal">
+          <h4 class="footer-heading">Legal</h4>
+          <ul>
+            <li><a href="#">Imprint</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
