@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AvanAI Logos</title>
+    <meta name="description" content="Download AvanAI brand logos in dark and light variants, as PNG and SVG." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --bg: #0b0c10;
+        --panel: #12141a;
+        --panel-2: #151821;
+        --text: #e6e8ee;
+        --muted: #aab0bd;
+        --border: #202533;
+        --brand: #6aa4ff;
+        --brand-strong: #4b8dff;
+      }
+
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        background: radial-gradient(1200px 600px at 50% -50%, rgba(106,164,255,0.12), transparent 60%), var(--bg);
+        color: var(--text);
+        line-height: 1.4;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 48px 20px 64px;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 28px;
+      }
+
+      .title {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .title img {
+        height: 28px;
+      }
+
+      h1 {
+        font-size: 28px;
+        margin: 0;
+        letter-spacing: -0.01em;
+      }
+
+      .lead {
+        color: var(--muted);
+        margin-bottom: 28px;
+      }
+
+      .cta-row {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-bottom: 24px;
+      }
+
+      .btn {
+        appearance: none;
+        border: 1px solid var(--border);
+        background: linear-gradient(180deg, var(--panel), var(--panel-2));
+        color: var(--text);
+        padding: 10px 14px;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform .03s ease, border-color .15s ease, background .15s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .btn:active { transform: translateY(1px); }
+      .btn.primary {
+        background: linear-gradient(180deg, var(--brand), var(--brand-strong));
+        border-color: rgba(255,255,255,0.08);
+        color: #07152e;
+      }
+      .btn[disabled] { opacity: .7; cursor: not-allowed; }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+      @media (max-width: 860px) {
+        .grid { grid-template-columns: 1fr; }
+      }
+
+      .card {
+        border: 1px solid var(--border);
+        background: linear-gradient(180deg, rgba(18,20,26,0.75), rgba(15,16,21,0.75));
+        border-radius: 14px;
+        padding: 16px;
+      }
+      .card h3 { margin: 0 0 6px; font-size: 16px; }
+      .card .meta { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+
+      .preview {
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 16px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .panel {
+        border: 1px dashed rgba(255,255,255,0.08);
+        border-radius: 10px;
+        padding: 12px;
+        display: grid;
+        place-items: center;
+        min-height: 120px;
+        background-image: repeating-conic-gradient(#222 0% 25%, #1a1a1a 0% 50%);
+        background-size: 30px 30px;
+        color: var(--muted);
+      }
+      .panel.light { background: #f3f6fb; }
+      .panel.dark { background: #0b0c10; }
+
+      .panel img, .panel svg {
+        max-width: 100%;
+        max-height: 80px;
+      }
+
+      .file-links {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .file-links a { text-decoration: none; }
+
+      footer {
+        margin-top: 36px;
+        color: var(--muted);
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="title">
+          <img src="../logo/light_avanai_logo_shape.svg" alt="AvanAI" />
+          <h1>AvanAI Logos</h1>
+        </div>
+        <a class="btn" href="../index.html">Home</a>
+      </header>
+
+      <p class="lead">Official brand assets. Dark and light variants in both PNG and SVG formats.
+        Use SVG whenever possible for best scalability.</p>
+
+      <div class="cta-row">
+        <button id="downloadAll" class="btn primary">Download all (avanai_logo.zip)</button>
+        <a class="btn" href="#usage">Usage notes</a>
+      </div>
+
+      <div class="grid">
+        <!-- Dark - Full -->
+        <section class="card">
+          <h3>Dark – Full Logo</h3>
+          <div class="meta">Use on light backgrounds</div>
+          <div class="preview">
+            <div class="panel light" aria-label="Light background preview">
+              <img src="dark_avanai_logo_full.png" alt="AvanAI dark full logo (PNG) on light background" />
+            </div>
+            <div class="panel light" aria-label="Light background preview">
+              <img src="dark_avanai_logo_full.svg" alt="AvanAI dark full logo (SVG) on light background" />
+            </div>
+          </div>
+          <div class="file-links">
+            <a class="btn" download href="dark_avanai_logo_full.png">PNG</a>
+            <a class="btn" download href="dark_avanai_logo_full.svg">SVG</a>
+          </div>
+        </section>
+
+        <!-- Dark - Shape -->
+        <section class="card">
+          <h3>Dark – Logomark (Shape)</h3>
+          <div class="meta">Use on light backgrounds</div>
+          <div class="preview">
+            <div class="panel light" aria-label="Light background preview">
+              <img src="dark_avanai_logo_shape.png" alt="AvanAI dark logomark (PNG) on light background" />
+            </div>
+            <div class="panel light" aria-label="Light background preview">
+              <img src="dark_avanai_logo_shape.svg" alt="AvanAI dark logomark (SVG) on light background" />
+            </div>
+          </div>
+          <div class="file-links">
+            <a class="btn" download href="dark_avanai_logo_shape.png">PNG</a>
+            <a class="btn" download href="dark_avanai_logo_shape.svg">SVG</a>
+          </div>
+        </section>
+
+        <!-- Light - Full -->
+        <section class="card">
+          <h3>Light – Full Logo</h3>
+          <div class="meta">Use on dark backgrounds</div>
+          <div class="preview">
+            <div class="panel dark" aria-label="Dark background preview">
+              <img src="light_avanai_logo_full.png" alt="AvanAI light full logo (PNG) on dark background" />
+            </div>
+            <div class="panel dark" aria-label="Dark background preview">
+              <img src="light_avanai_logo_full.svg" alt="AvanAI light full logo (SVG) on dark background" />
+            </div>
+          </div>
+          <div class="file-links">
+            <a class="btn" download href="light_avanai_logo_full.png">PNG</a>
+            <a class="btn" download href="light_avanai_logo_full.svg">SVG</a>
+          </div>
+        </section>
+
+        <!-- Light - Shape -->
+        <section class="card">
+          <h3>Light – Logomark (Shape)</h3>
+          <div class="meta">Use on dark backgrounds</div>
+          <div class="preview">
+            <div class="panel dark" aria-label="Dark background preview">
+              <img src="light_avanai_logo_shape.png" alt="AvanAI light logomark (PNG) on dark background" />
+            </div>
+            <div class="panel dark" aria-label="Dark background preview">
+              <img src="light_avanai_logo_shape.svg" alt="AvanAI light logomark (SVG) on dark background" />
+            </div>
+          </div>
+          <div class="file-links">
+            <a class="btn" download href="light_avanai_logo_shape.png">PNG</a>
+            <a class="btn" download href="light_avanai_logo_shape.svg">SVG</a>
+          </div>
+        </section>
+      </div>
+
+      <footer id="usage">
+        <p><strong>Usage notes:</strong> Keep clear space around the logo and do not alter the colors or proportions. Prefer SVG for crisp rendering at any size. Choose the dark variant on light backgrounds and the light variant on dark backgrounds.</p>
+      </footer>
+    </div>
+
+    <!-- JSZip + FileSaver for on-the-fly zip download -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script>
+      (function() {
+        const files = [
+          'dark_avanai_logo_full.png',
+          'dark_avanai_logo_full.svg',
+          'dark_avanai_logo_shape.png',
+          'dark_avanai_logo_shape.svg',
+          'light_avanai_logo_full.png',
+          'light_avanai_logo_full.svg',
+          'light_avanai_logo_shape.png',
+          'light_avanai_logo_shape.svg',
+        ];
+
+        const button = document.getElementById('downloadAll');
+        async function fetchAsBlob(path) {
+          const response = await fetch(path, { cache: 'no-cache' });
+          if (!response.ok) throw new Error('Failed to fetch ' + path);
+          return await response.blob();
+        }
+
+        async function downloadZip() {
+          if (!window.JSZip || !window.saveAs) {
+            alert('Zip download is unavailable offline. Please use the individual links or serve the site via a local server.');
+            return;
+          }
+          button.disabled = true;
+          const originalText = button.textContent;
+          button.textContent = 'Preparing…';
+          try {
+            const zip = new JSZip();
+            const folder = zip.folder('avanai_logo');
+            const blobs = await Promise.all(files.map(async (path) => {
+              const blob = await fetchAsBlob(path);
+              return { path, blob };
+            }));
+            blobs.forEach(({ path, blob }) => folder.file(path, blob));
+            const content = await zip.generateAsync({ type: 'blob' });
+            saveAs(content, 'avanai_logo.zip');
+            button.textContent = 'Done!';
+            setTimeout(() => { button.textContent = originalText; button.disabled = false; }, 1200);
+          } catch (err) {
+            console.error(err);
+            alert('There was an issue creating the zip. You can still download files individually.');
+            button.textContent = originalText;
+            button.disabled = false;
+          }
+        }
+
+        button.addEventListener('click', downloadZip);
+      })();
+    </script>
+  </body>
+  </html>
+
