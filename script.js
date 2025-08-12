@@ -62,9 +62,13 @@ document.querySelectorAll('.mobile-nav a').forEach((link) => {
       // Hide the form and show success
       form.setAttribute('hidden', '');
       successEl?.removeAttribute('hidden');
+      // Ensure success message is visible
+      successEl?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     } catch (err) {
       console.error(err);
       errorEl?.removeAttribute('hidden');
+      // Ensure error message is visible
+      errorEl?.scrollIntoView({ behavior: 'smooth', block: 'center' });
     } finally {
       if (submitButton) {
         submitButton.disabled = false;
