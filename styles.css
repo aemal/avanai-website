@@ -465,8 +465,8 @@ a { color: inherit; text-decoration: none; }
 /* About Page */
 .about-hero { background: var(--bg); padding: 112px 0 28px; }
 .about-hero-inner { text-align: center; max-width: 900px; margin: 0 auto; }
-.about-title { margin: 6px 0 12px; font-size: clamp(32px, 5vw, 48px); line-height: 1.1; }
-.about-title span { color: #0ea5e9; }
+.about-title { margin: 6px 0 12px; font-size: clamp(32px, 5vw, 48px); line-height: 1.1; color: #27b2f9; }
+.about-title span { color: #7857f2; }
 .about-subtitle { margin: 0; color: var(--muted); font-size: clamp(16px, 2.5vw, 18px); }
 
 .about-facts { background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%); padding: 24px 0 64px; }
@@ -487,12 +487,13 @@ a { color: inherit; text-decoration: none; }
 .value-title { margin: 2px 0 6px; color: #0f172a; font-size: 18px; }
 .value-copy { margin: 0; color: #475569; }
 
-.difference { background: #ffffff; padding: 88px 0; }
-.difference-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-top: 12px; }
-.diff-item { text-align: center; padding: 18px; }
-.diff-icon { width: 56px; height: 56px; border-radius: 14px; background: #e0f2fe; color: #0369a1; display: grid; place-items: center; font-size: 26px; margin: 0 auto 12px; }
-.diff-title { margin: 0 0 6px; font-size: 18px; }
-.diff-copy { margin: 0; color: #475569; }
+.difference { position: relative; background: #ffffff; padding: 88px 0 100px; overflow: hidden; }
+.difference-grid { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 12px; }
+.diff-card { background: #7a5af8; color: white; border-radius: 16px; padding: 24px 20px; text-align: center; box-shadow: 0 18px 50px rgba(122,90,248,.25); }
+.diff-icon { display: grid; place-items: center; margin-bottom: 14px; }
+.diff-icon img { width: 64px; height: 64px; }
+.diff-title { font-size: clamp(18px, 2.4vw, 22px); font-weight: 800; line-height: 1.2; margin-bottom: 8px; }
+.diff-card p { margin: 0; color: rgba(255,255,255,.92); font-size: 15px; line-height: 1.5; }
 
 .about-cta { position: relative; background: #4f46e5; color: #ffffff; }
 .about-cta-bg { position: absolute; inset: 0; background: url('./images/final_cta_bg.png') center/cover no-repeat; opacity: .25; }
@@ -508,7 +509,7 @@ a { color: inherit; text-decoration: none; }
   .facts-list { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 36px; row-gap: 12px; }
   .values { padding: 104px 0; }
   .values-grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
-  .difference { padding: 104px 0; }
-  .difference-grid { grid-template-columns: repeat(3, 1fr); gap: 36px; }
+  .difference { padding: 104px 0 120px; }
+  .difference-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
   .about-cta-inner { padding: 120px 24px; }
 }
