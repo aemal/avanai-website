@@ -236,3 +236,23 @@ a { color: inherit; text-decoration: none; }
   .band-cta-button { justify-self: end; }
 }
 
+/* Challenges We Solve */
+.challenges { background: #ffffff; padding: 88px 0 100px; }
+.challenges-eyebrow { color: #ef4444; letter-spacing: .18em; text-align: center; }
+.challenges-title { text-align: center; margin: 6px 0 10px; font-size: clamp(28px, 4.6vw, 40px); }
+.challenges-subtitle { max-width: 900px; margin: 0 auto 34px; text-align: center; color: var(--muted); }
+
+.challenges-grid { display: grid; grid-template-columns: 1fr; gap: 28px; margin-top: 8px; }
+.challenge { display: grid; grid-template-columns: 52px 1fr; gap: 14px; align-items: start; }
+.challenge-icon { width: 52px; height: 52px; display: grid; place-items: center; }
+.challenge-icon img { width: 48px; height: 48px; object-fit: contain; display: block; }
+.challenge-title { margin: 0 0 6px; font-size: 20px; }
+.challenge-copy { margin: 0; color: #475569; }
+
+@media (min-width: 920px) {
+  .challenges { padding: 104px 0 116px; }
+  .challenges-grid { grid-template-columns: repeat(3, 1fr); gap: 46px 48px; }
+  .challenge { grid-template-columns: 60px 1fr; }
+  .challenge-icon { width: 60px; height: 60px; }
+  .challenge-icon img { width: 56px; height: 56px; }
+}
