@@ -10,6 +10,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css" />
     <link rel="icon" href="../images/logo.png" />
+    <style>
+      /* Contact form submission messages */
+      .form-success, .form-error { 
+        border: 1px solid rgba(255,255,255,0.08);
+        background: linear-gradient(180deg, #12141a, #0f1015);
+        color: #e6e8ee;
+        border-radius: 14px;
+        padding: 20px;
+        margin-top: 16px;
+      }
+      .form-success h3 { margin: 0 0 8px; font-size: 20px; }
+      .form-success p { margin: 0 0 12px; color: #aab0bd; }
+      .form-success-icon {
+        width: 40px; height: 40px; border-radius: 10px;
+        display: grid; place-items: center; margin-bottom: 10px;
+        background: linear-gradient(180deg, #6aa4ff, #4b8dff); color: #07152e; font-weight: 800;
+      }
+      .form-error { border-color: rgba(255, 99, 99, 0.25); }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -114,6 +133,17 @@
                 <p class="form-note">We'll get back to you within 24 hours.</p>
               </div>
             </form>
+            <div id="formSuccess" class="form-success" hidden>
+              <div class="form-success-icon">✓</div>
+              <h3>Thanks for reaching out!</h3>
+              <p>Your contact details have been submitted. Someone will get back to you very soon.</p>
+              <div class="form-actions">
+                <a class="btn" href="../index.html">Back to Home</a>
+              </div>
+            </div>
+            <div id="formError" class="form-error" hidden>
+              <p>We couldn't submit your details right now. Please try again in a moment.</p>
+            </div>
           </div>
 
           <div class="contact-info">
