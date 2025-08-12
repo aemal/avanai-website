@@ -128,6 +128,8 @@ a { color: inherit; text-decoration: none; }
 .logo-list li { display: flex; align-items: center; justify-content: center; min-height: 24px; }
 /* Uniform scaling without cropping on mobile */
 .logo-list img { max-height: 24px; max-width: 100%; width: auto; display: block; filter: grayscale(100%); opacity: .85; object-fit: contain; }
+/* Visually balance smaller-mark logos */
+.logo-list img[alt="Sparkasse"] { max-height: 35px; }
 
 /* Section links band */
 .section-links { display: none; background: transparent; padding: 24px 0 8px; }
@@ -174,7 +176,7 @@ a { color: inherit; text-decoration: none; }
 .footer-col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
 .footer-col a { color: #9ca3af; }
 .footer-col a:hover { color: #ffffff; }
-.footer-bottom { border-top: 1px solid rgba(148,163,184,.16); padding: 20px 0 24px; display: flex; justify-content: center; color: #94a3b8; }
+.footer-bottom { border-top: 1px solid rgba(148,163,184,.16); padding: 20px 0 56px; display: flex; justify-content: center; color: #94a3b8; }
 
 /* Larger screens */
 @media (min-width: 920px) {
@@ -192,6 +194,7 @@ a { color: inherit; text-decoration: none; }
   .logo-list { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 24px 60px; }
   .logo-list li { min-height: 30px; }
   .logo-list img { max-height: 30px; max-width: 100%; width: auto; }
+  .logo-list img[alt="Sparkasse"] { max-height: 36px; }
 
   .section-links { display: block; padding: 28px 0 12px; }
   .section-links-list { grid-template-columns: repeat(3, 1fr); }
@@ -312,5 +315,6 @@ a { color: inherit; text-decoration: none; }
   .footer-inner { grid-template-columns: 1.4fr .6fr .6fr; align-items: start; }
   .final-cta { padding: 104px 0; }
   .final-cta-inner { grid-template-columns: 1fr auto; }
+  .footer-bottom { padding: 24px 0 72px; }
   .final-cta-actions { justify-self: end; }
 }
