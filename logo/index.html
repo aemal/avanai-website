@@ -3,254 +3,223 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AvanAI Logos</title>
-    <meta name="description" content="Download AvanAI brand logos in dark and light variants, as PNG and SVG." />
+    <title>Avanai Logos</title>
+    <meta name="description" content="Official Avanai brand assets in PNG and SVG. Dark and light variants." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" href="../images/logo.png" />
     <style>
-      :root {
-        --bg: #0b0c10;
-        --panel: #12141a;
-        --panel-2: #151821;
-        --text: #e6e8ee;
-        --muted: #aab0bd;
-        --border: #202533;
-        --brand: #6aa4ff;
-        --brand-strong: #4b8dff;
+      /* Scoped styles for the logo asset grid to blend with site theme */
+      .logo-assets .grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+      @media (min-width: 920px) { .logo-assets .grid { grid-template-columns: 1fr 1fr; gap: 28px; } }
+      .logo-assets .card {
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 16px;
+        padding: 16px;
+        box-shadow: 0 6px 22px rgba(17,24,39,.06);
       }
-
-      * { box-sizing: border-box; }
-      html, body { margin: 0; padding: 0; }
-      body {
-        font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-        background: radial-gradient(1200px 600px at 50% -50%, rgba(106,164,255,0.12), transparent 60%), var(--bg);
-        color: var(--text);
-        line-height: 1.4;
+      .logo-assets .card h3 { margin: 0 0 6px; font-size: 16px; }
+      .logo-assets .card .meta { color: #64748b; font-size: 13px; margin-bottom: 12px; }
+      .logo-assets .preview {
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 16px;
+        background: #f8fafc;
+        display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;
       }
-
-      .container {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 48px 20px 64px;
+      .logo-assets .tile { display: grid; gap: 10px; justify-items: center; align-content: start; }
+      .logo-assets .panel {
+        border: 1px dashed rgba(15,23,42,.12);
+        border-radius: 12px;
+        padding: 12px;
+        display: grid; place-items: center;
+        min-height: 180px;
+        color: #64748b;
+        width: 100%;
       }
+      .logo-assets .panel.light { background: #f3f6fb; }
+      .logo-assets .panel.dark { background: #0b1020; }
+      .logo-assets .panel img, .logo-assets .panel svg { max-width: 100%; max-height: 80px; display: block; }
+      .logo-assets .file-links { display: none; }
+      .logo-actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin-top: 16px; }
 
-      header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        margin-bottom: 28px;
-      }
-
-      .title {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-      }
-
-      .title img {
-        height: 28px;
-      }
-
-      h1 {
-        font-size: 28px;
-        margin: 0;
-        letter-spacing: -0.01em;
-      }
-
-      .lead {
-        color: var(--muted);
-        margin-bottom: 28px;
-      }
-
-      .cta-row {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        margin-bottom: 24px;
-      }
-
-      .btn {
-        appearance: none;
-        border: 1px solid var(--border);
-        background: linear-gradient(180deg, var(--panel), var(--panel-2));
-        color: var(--text);
-        padding: 10px 14px;
-        border-radius: 10px;
-        font-weight: 600;
-        cursor: pointer;
-        transition: transform .03s ease, border-color .15s ease, background .15s ease;
-        text-decoration: none;
+      /* Download buttons inside tiles */
+      .download-btn {
         display: inline-flex;
         align-items: center;
-        gap: 8px;
-      }
-      .btn:active { transform: translateY(1px); }
-      .btn.primary {
-        background: linear-gradient(180deg, var(--brand), var(--brand-strong));
-        border-color: rgba(255,255,255,0.08);
-        color: #07152e;
-      }
-      .btn[disabled] { opacity: .7; cursor: not-allowed; }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
-      }
-      @media (max-width: 860px) {
-        .grid { grid-template-columns: 1fr; }
-      }
-
-      .card {
-        border: 1px solid var(--border);
-        background: linear-gradient(180deg, rgba(18,20,26,0.75), rgba(15,16,21,0.75));
-        border-radius: 14px;
-        padding: 16px;
-      }
-      .card h3 { margin: 0 0 6px; font-size: 16px; }
-      .card .meta { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
-
-      .preview {
-        border: 1px solid var(--border);
+        justify-content: center;
+        padding: 8px 12px;
         border-radius: 10px;
-        padding: 16px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 12px;
-        margin-bottom: 12px;
+        border: 1px solid #e5e7eb;
+        background: #f8fafc;
+        color: #0f172a;
+        font-weight: 700;
+        text-decoration: none;
+        width: 100%;
       }
-      .panel {
-        border: 1px dashed rgba(255,255,255,0.08);
-        border-radius: 10px;
-        padding: 12px;
-        display: grid;
-        place-items: center;
-        min-height: 120px;
-        background-image: repeating-conic-gradient(#222 0% 25%, #1a1a1a 0% 50%);
-        background-size: 30px 30px;
-        color: var(--muted);
-      }
-      .panel.light { background: #f3f6fb; }
-      .panel.dark { background: #0b0c10; }
+      .download-btn:hover { background: #eef2f7; }
 
-      .panel img, .panel svg {
-        max-width: 100%;
-        max-height: 80px;
+      /* Usage notes card */
+      .logo-usage { margin-top: 32px; }
+      .logo-usage .usage-card {
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 16px;
+        padding: 22px 24px;
+        box-shadow: 0 6px 22px rgba(17,24,39,.06);
       }
-
-      .file-links {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-      }
-      .file-links a { text-decoration: none; }
-
-      footer {
-        margin-top: 36px;
-        color: var(--muted);
-        font-size: 13px;
-      }
+      .logo-usage .usage-card h3 { margin: 0 0 8px; font-size: 18px; color: #0f172a; }
+      .logo-usage .usage-card p { margin: 0; color: #475569; font-size: 16px; line-height: 1.65; }
     </style>
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div class="title">
-          <img src="../logo/light_avanai_logo_shape.svg" alt="AvanAI" />
-          <h1>AvanAI Logos</h1>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../" aria-label="Avanai home">
+          <img src="../images/logo.png" alt="Avanai" class="brand-logo" />
+        </a>
+        <nav class="main-nav" aria-label="Primary">
+          <a href="../#challenges">Challenges We Solve</a>
+          <a href="../#how">How We Help</a>
+        </nav>
+        <a class="btn btn-primary header-cta" href="/contact">Get in Touch</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
+        <a href="../index.html#challenges">Challenges We Solve</a>
+        <a href="../index.html#how">How We Help</a>
+        
+        <a class="btn btn-primary" href="/contact">Get in Touch</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-hero">
+        <div class="container contact-hero-inner">
+          <p class="eyebrow contact-eyebrow">Brand Assets</p>
+          <h1 class="contact-title">Avanai Logos</h1>
+          <p class="contact-subtitle">Official brand assets. Dark and light variants in PNG and SVG formats. Use SVG for best scalability.</p>
+          <div class="logo-actions">
+            <button id="downloadAll" class="btn btn-primary btn-lg">Download all (avanai_logo.zip)</button>
+            <a class="btn" href="#usage">Usage notes</a>
+          </div>
         </div>
-        <a class="btn" href="../index.html">Home</a>
-      </header>
+      </section>
 
-      <p class="lead">Official brand assets. Dark and light variants in both PNG and SVG formats.
-        Use SVG whenever possible for best scalability.</p>
+      <section class="contact-form-section logo-assets">
+        <div class="container">
+          <div class="grid">
+            <!-- Dark - Full -->
+            <section class="card">
+              <h3>Dark – Full Logo</h3>
+              <div class="meta">Use on light backgrounds</div>
+              <div class="preview">
+                <div class="tile">
+                  <div class="panel dark" aria-label="Dark background preview">
+                    <img src="dark_avanai_logo_full.png" alt="Avanai dark full logo (PNG) on light background" />
+                  </div>
+                  <a class="download-btn" download href="dark_avanai_logo_full.png">Download PNG</a>
+                </div>
+                <div class="tile">
+                  <div class="panel dark" aria-label="Dark background preview">
+                    <img src="dark_avanai_logo_full.svg" alt="Avanai dark full logo (SVG) on light background" />
+                  </div>
+                  <a class="download-btn" download href="dark_avanai_logo_full.svg">Download SVG</a>
+                </div>
+              </div>
+            </section>
 
-      <div class="cta-row">
-        <button id="downloadAll" class="btn primary">Download all (avanai_logo.zip)</button>
-        <a class="btn" href="#usage">Usage notes</a>
+            <!-- Dark - Shape -->
+            <section class="card">
+              <h3>Dark – Logomark (Shape)</h3>
+              <div class="meta">Use on light backgrounds</div>
+              <div class="preview">
+                <div class="tile">
+                  <div class="panel dark" aria-label="Dark background preview">
+                    <img src="dark_avanai_logo_shape.png" alt="Avanai dark logomark (PNG) on light background" />
+                  </div>
+                  <a class="download-btn" download href="dark_avanai_logo_shape.png">Download PNG</a>
+                </div>
+                <div class="tile">
+                  <div class="panel dark" aria-label="Dark background preview">
+                    <img src="dark_avanai_logo_shape.svg" alt="Avanai dark logomark (SVG) on light background" />
+                  </div>
+                  <a class="download-btn" download href="dark_avanai_logo_shape.svg">Download SVG</a>
+                </div>
+              </div>
+            </section>
+
+            <!-- Light - Full -->
+            <section class="card">
+              <h3>Light – Full Logo</h3>
+              <div class="meta">Use on dark backgrounds</div>
+              <div class="preview">
+                <div class="tile">
+                  <div class="panel light" aria-label="Light background preview">
+                    <img src="light_avanai_logo_full.png" alt="Avanai light full logo (PNG) on dark background" />
+                  </div>
+                  <a class="download-btn" download href="light_avanai_logo_full.png">Download PNG</a>
+                </div>
+                <div class="tile">
+                  <div class="panel light" aria-label="Light background preview">
+                    <img src="light_avanai_logo_full.svg" alt="Avanai light full logo (SVG) on dark background" />
+                  </div>
+                  <a class="download-btn" download href="light_avanai_logo_full.svg">Download SVG</a>
+                </div>
+              </div>
+            </section>
+
+            <!-- Light - Shape -->
+            <section class="card">
+              <h3>Light – Logomark (Shape)</h3>
+              <div class="meta">Use on dark backgrounds</div>
+              <div class="preview">
+                <div class="tile">
+                  <div class="panel light" aria-label="Light background preview">
+                    <img src="light_avanai_logo_shape.png" alt="Avanai light logomark (PNG) on dark background" />
+                  </div>
+                  <a class="download-btn" download href="light_avanai_logo_shape.png">Download PNG</a>
+                </div>
+                <div class="tile">
+                  <div class="panel light" aria-label="Light background preview">
+                    <img src="light_avanai_logo_shape.svg" alt="Avanai light logomark (SVG) on dark background" />
+                  </div>
+                  <a class="download-btn" download href="light_avanai_logo_shape.svg">Download SVG</a>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div id="usage" class="logo-usage">
+            <div class="usage-card" role="note" aria-label="Usage notes">
+              <h3>Usage notes</h3>
+              <p>Keep clear space around the logo and do not alter the colors or proportions. Prefer SVG for crisp rendering at any size. Choose the dark variant on light backgrounds and the light variant on dark backgrounds.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <h3 class="footer-title">Avanai GmbH</h3>
+          <p class="footer-description">Reimagine work. With AI agents and automation that delivers results, not surprises.</p>
+        </div>
+        
+        <nav class="footer-col" aria-label="Legal">
+          <h4 class="footer-heading">Legal</h4>
+          <ul>
+            <li><a href="/imprint">Imprint</a></li>
+          </ul>
+        </nav>
       </div>
-
-      <div class="grid">
-        <!-- Dark - Full -->
-        <section class="card">
-          <h3>Dark – Full Logo</h3>
-          <div class="meta">Use on light backgrounds</div>
-          <div class="preview">
-            <div class="panel light" aria-label="Light background preview">
-              <img src="dark_avanai_logo_full.png" alt="AvanAI dark full logo (PNG) on light background" />
-            </div>
-            <div class="panel light" aria-label="Light background preview">
-              <img src="dark_avanai_logo_full.svg" alt="AvanAI dark full logo (SVG) on light background" />
-            </div>
-          </div>
-          <div class="file-links">
-            <a class="btn" download href="dark_avanai_logo_full.png">PNG</a>
-            <a class="btn" download href="dark_avanai_logo_full.svg">SVG</a>
-          </div>
-        </section>
-
-        <!-- Dark - Shape -->
-        <section class="card">
-          <h3>Dark – Logomark (Shape)</h3>
-          <div class="meta">Use on light backgrounds</div>
-          <div class="preview">
-            <div class="panel light" aria-label="Light background preview">
-              <img src="dark_avanai_logo_shape.png" alt="AvanAI dark logomark (PNG) on light background" />
-            </div>
-            <div class="panel light" aria-label="Light background preview">
-              <img src="dark_avanai_logo_shape.svg" alt="AvanAI dark logomark (SVG) on light background" />
-            </div>
-          </div>
-          <div class="file-links">
-            <a class="btn" download href="dark_avanai_logo_shape.png">PNG</a>
-            <a class="btn" download href="dark_avanai_logo_shape.svg">SVG</a>
-          </div>
-        </section>
-
-        <!-- Light - Full -->
-        <section class="card">
-          <h3>Light – Full Logo</h3>
-          <div class="meta">Use on dark backgrounds</div>
-          <div class="preview">
-            <div class="panel dark" aria-label="Dark background preview">
-              <img src="light_avanai_logo_full.png" alt="AvanAI light full logo (PNG) on dark background" />
-            </div>
-            <div class="panel dark" aria-label="Dark background preview">
-              <img src="light_avanai_logo_full.svg" alt="AvanAI light full logo (SVG) on dark background" />
-            </div>
-          </div>
-          <div class="file-links">
-            <a class="btn" download href="light_avanai_logo_full.png">PNG</a>
-            <a class="btn" download href="light_avanai_logo_full.svg">SVG</a>
-          </div>
-        </section>
-
-        <!-- Light - Shape -->
-        <section class="card">
-          <h3>Light – Logomark (Shape)</h3>
-          <div class="meta">Use on dark backgrounds</div>
-          <div class="preview">
-            <div class="panel dark" aria-label="Dark background preview">
-              <img src="light_avanai_logo_shape.png" alt="AvanAI light logomark (PNG) on dark background" />
-            </div>
-            <div class="panel dark" aria-label="Dark background preview">
-              <img src="light_avanai_logo_shape.svg" alt="AvanAI light logomark (SVG) on dark background" />
-            </div>
-          </div>
-          <div class="file-links">
-            <a class="btn" download href="light_avanai_logo_shape.png">PNG</a>
-            <a class="btn" download href="light_avanai_logo_shape.svg">SVG</a>
-          </div>
-        </section>
-      </div>
-
-      <footer id="usage">
-        <p><strong>Usage notes:</strong> Keep clear space around the logo and do not alter the colors or proportions. Prefer SVG for crisp rendering at any size. Choose the dark variant on light backgrounds and the light variant on dark backgrounds.</p>
-        <p style="margin-top: 8px;"><a href="/imprint" style="color: inherit;">Imprint</a></p>
-      </footer>
-    </div>
+    </footer>
 
     <!-- JSZip + FileSaver for on-the-fly zip download -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
@@ -306,6 +275,7 @@
         button.addEventListener('click', downloadZip);
       })();
     </script>
+    <script src="../script.js"></script>
   </body>
   </html>
 
