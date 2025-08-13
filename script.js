@@ -22,6 +22,42 @@ document.querySelectorAll('.mobile-nav a').forEach((link) => {
   });
 });
 
+// Promo video overlay
+const videoFab = document.getElementById('video-fab');
+const videoOverlay = document.getElementById('video-overlay');
+const videoIframe = document.getElementById('video-iframe');
+
+function openVideo() {
+  if (!videoOverlay) return;
+  videoOverlay.setAttribute('aria-hidden', 'false');
+  const src = videoIframe?.getAttribute('data-src');
+  if (videoIframe && src) {
+    // load and autoplay
+    videoIframe.setAttribute('src', src);
+  }
+}
+
+function closeVideo() {
+  if (!videoOverlay) return;
+  videoOverlay.setAttribute('aria-hidden', 'true');
+  // stop playback by removing src
+  if (videoIframe) {
+    videoIframe.setAttribute('src', '');
+  }
+}
+
+videoFab?.addEventListener('click', openVideo);
+videoOverlay?.addEventListener('click', (e) => {
+  const target = e.target;
+  if (target instanceof Element && (target.hasAttribute('data-close') || target.classList.contains('video-overlay'))) {
+    closeVideo();
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeVideo();
+});
+
 // Contact form submission
 (() => {
   const form = document.querySelector('.contact-form');

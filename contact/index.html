@@ -177,16 +177,29 @@
         <div class="footer-brand">
           <h3 class="footer-title">Avanai GmbH</h3>
           <p class="footer-description">Reimagine work. With AI agents and automation that deliver results, not surprises.</p>
+          <a class="imprint-link" href="/imprint">Imprint</a>
         </div>
-        
-        <nav class="footer-col" aria-label="Legal">
-          <h4 class="footer-heading">Legal</h4>
-          <ul>
-            <li><a href="/imprint">Imprint</a></li>
-          </ul>
-        </nav>
       </div>
     </footer>
+
+    <!-- Floating promo video trigger -->
+    <button id="video-fab" class="video-fab" aria-haspopup="dialog" aria-controls="video-overlay" aria-label="Play intro video">
+      <img src="../images/promo.png" alt="Watch our short intro" />
+    </button>
+
+    <!-- Video overlay -->
+    <div id="video-overlay" class="video-overlay" role="dialog" aria-modal="true" aria-labelledby="video-title" aria-hidden="true">
+      <div class="video-backdrop" data-close></div>
+      <div class="video-panel" role="document">
+        <button class="video-close" aria-label="Close video" data-close>
+          <span aria-hidden="true">×</span>
+        </button>
+        <div class="video-frame-wrap">
+          <iframe id="video-iframe" title="Avanai promo" width="560" height="315" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen
+            src="" data-src="https://www.youtube.com/embed/oyGUYZIdg7I?autoplay=1&rel=0&modestbranding=1&playsinline=1"></iframe>
+        </div>
+      </div>
+    </div>
 
     <script src="../script.js"></script>
   </body>
