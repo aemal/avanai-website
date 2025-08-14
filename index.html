@@ -14,6 +14,32 @@
     <meta name="vapi-public-key" content="YOUR_VAPI_PUBLIC_KEY" />
     <meta name="vapi-assistant-id" content="YOUR_VAPI_ASSISTANT_ID" />
     <script defer src="https://cloud.umami.is/script.js" data-website-id="af5b3e73-75a7-46c2-92c6-9abda7c67bf0"></script>
+    <style>
+      /* index.html only: video dialog topbar visible on all sizes */
+      #video-overlay .video-topbar {
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        align-items: center;
+        padding: 12px 12px 8px;
+        padding-top: calc(10px + env(safe-area-inset-top));
+        background: rgba(0,0,0,.65);
+        backdrop-filter: blur(6px);
+        z-index: 101;
+      }
+      #video-overlay .video-topbar a,
+      #video-overlay .video-topbar button {
+        appearance: none; -webkit-appearance: none; border: 0;
+        border-radius: 12px; padding: 12px 16px; font-weight: 800;
+        font-family: inherit; font-size: 16px; line-height: 1;
+      }
+      #video-overlay .video-topbar-linkedin { background: #0a66c2; color: #fff; box-shadow: 0 8px 22px rgba(10,102,194,.36); }
+      #video-overlay .video-topbar-close { background: #0f172a; color: #fff; box-shadow: 0 8px 22px rgba(15,23,42,.28); }
+      #video-overlay .video-close { display: none; }
+      #video-overlay .video-footer { display: none; }
+    </style>
   </head>
   <body>
     <header class="site-header">
@@ -344,6 +370,10 @@
         <button class="video-close" aria-label="Close video" data-close>
           <span aria-hidden="true">×</span>
         </button>
+        <div class="video-topbar">
+          <a class="video-topbar-linkedin" href="https://www.linkedin.com/in/chvoigt/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+          <button class="video-topbar-close" type="button" data-close aria-label="Close video">Close</button>
+        </div>
         <div class="video-frame-wrap">
           <iframe id="video-iframe" title="Avanai promo" width="560" height="315" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen
             src="" data-src="https://www.youtube.com/embed/oyGUYZIdg7I?autoplay=1&rel=0&modestbranding=1&playsinline=1&controls=0&iv_load_policy=3&showinfo=0"></iframe>

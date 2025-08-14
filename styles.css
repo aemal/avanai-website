@@ -365,7 +365,8 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
   display: flex; flex-direction: column;
 }
-.video-close { position: absolute; top: 8px; right: 10px; background: transparent; border: 0; font-size: 28px; line-height: 1; color: #334155; cursor: pointer; }
+.video-topbar { display: none; }
+.video-close { position: absolute; top: 8px; right: 10px; background: transparent; border: 0; font-size: 28px; line-height: 1; color: #334155; cursor: pointer; z-index: 100; }
 .video-frame-wrap { width: 100%; flex: 1; background: transparent; position: relative; z-index: 1; overflow: hidden; }
 .video-frame-wrap iframe { width: 100%; height: 100%; display: block; transform: scale(1.18); transform-origin: center; }
 /* Remove default iframe background/borders in some browsers */
@@ -376,7 +377,8 @@ a { color: inherit; text-decoration: none; }
   position: relative;
   padding: 12px;
   background: transparent;
-  z-index: 2;
+  z-index: 1;
+  pointer-events: none;
 }
 .video-linkedin {
   display: inline-flex;
@@ -386,17 +388,43 @@ a { color: inherit; text-decoration: none; }
   border-radius: 12px;
   background: #0a66c2; color: #ffffff; font-weight: 800;
   box-shadow: 0 8px 22px rgba(10,102,194,.36);
+  pointer-events: auto;
 }
 .video-linkedin:hover { filter: brightness(1.06); }
 
 @media (max-width: 919px) {
   .video-panel { left: 0; right: 0; top: 0; transform: none; width: 100vw; height: 100vh; border-radius: 0; aspect-ratio: auto; }
   .video-frame-wrap { height: 100%; aspect-ratio: 9 / 16; }
+  .video-topbar {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 12px 8px;
+    padding-top: calc(10px + env(safe-area-inset-top));
+    background: rgba(0,0,0,.65);
+    backdrop-filter: blur(6px);
+    z-index: 101;
+  }
+  .video-topbar a, .video-topbar button {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-weight: 800;
+    font-family: inherit;
+    font-size: 16px;
+  }
+  .video-topbar-linkedin { background: #0a66c2; color: #fff; box-shadow: 0 8px 22px rgba(10,102,194,.36); text-align: center; }
+  .video-topbar-close { background: #0f172a; color: #fff; box-shadow: 0 8px 22px rgba(15,23,42,.28); }
+  .video-close { display: none; }
   .video-footer {
     order: -1; /* move CTA to the top on phones */
     padding: 12px;
     padding-top: calc(16px + env(safe-area-inset-top) + 24px); /* avoid notch and close btn */
     background: transparent;
+    pointer-events: none; /* prevent overlay from blocking close */
   }
   /* Slightly zoom the YouTube player to hide residual pillarboxing on mobile */
   .video-frame-wrap iframe { transform: scale(1.24); transform-origin: center; }
