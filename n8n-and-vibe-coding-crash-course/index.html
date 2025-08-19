@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>n8n & Vibe Coding Crash Course — Avanai</title>
+    <meta name="description" content="Learn to build real-world applications with automation, AI voice agents, and vibe coding - even with zero coding experience!" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+    <style>
+      /* Course form specific styles */
+      .course-hero {
+        padding: 120px 0 80px;
+      }
+      
+      .course-hero-inner {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        align-items: center;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      
+      .course-eyebrow {
+        color: #6aa4ff;
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 16px;
+      }
+      
+      .course-title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 800;
+        line-height: 1.1;
+        color: #202020;
+        margin-bottom: 24px;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      
+      .course-subtitle {
+        font-size: 20px;
+        line-height: 1.6;
+        color: #202020;
+        margin-bottom: 32px;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      }
+      
+      .course-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        margin-bottom: 40px;
+      }
+      
+      .course-feature {
+        background: rgba(15, 23, 42, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 24px;
+        text-align: left;
+        backdrop-filter: blur(10px);
+      }
+      
+      .course-feature h3 {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      
+      .course-feature-icon {
+        width: 24px;
+        height: 24px;
+        background: linear-gradient(135deg, #6aa4ff, #4b8dff);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 800;
+        font-size: 12px;
+      }
+      
+      .course-feature p {
+        color: #e2e8f0;
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+      }
+      
+      .course-outcomes {
+        background: rgba(106, 164, 255, 0.08);
+        border: 1px solid rgba(106, 164, 255, 0.2);
+        border-radius: 16px;
+        padding: 32px;
+        margin-bottom: 40px;
+        backdrop-filter: blur(10px);
+        text-align: left;
+      }
+      
+      .course-outcomes h3 {
+        color: #202020;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      
+      .course-outcomes-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .course-outcomes-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        color: #202020;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      
+      .course-outcomes-list li::before {
+        content: '✅';
+        font-size: 18px;
+        flex-shrink: 0;
+      }
+      
+      .course-target-audience {
+        background: rgb(39 178 249);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 16px;
+        padding: 32px;
+        text-align: center;
+        margin-bottom: 40px;
+        backdrop-filter: blur(10px);
+      }
+      
+      .course-target-audience h3 {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+      
+      .course-target-audience p {
+        color: #e2e8f0;
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0;
+      }
+      
+      /* Checkbox styling */
+      .form-checkbox-label {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        cursor: pointer;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #202020;
+      }
+      
+      .form-checkbox {
+        width: 18px;
+        height: 18px;
+        margin: 0;
+        cursor: pointer;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      
+      .form-checkbox-text {
+        flex: 1;
+      }
+      
+      .linkedin-link {
+        color: #0a66c2;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      
+      .linkedin-link:hover {
+        text-decoration: underline;
+      }
+
+      /* Form submission messages */
+      .form-success, .form-error { 
+        border: 1px solid rgba(255,255,255,0.08);
+        background: linear-gradient(180deg, #12141a, #0f1015);
+        color: #e6e8ee;
+        border-radius: 14px;
+        padding: 20px;
+        margin-top: 16px;
+      }
+      .form-success h3 { margin: 0 0 8px; font-size: 20px; }
+      .form-success p { margin: 0 0 12px; color: #aab0bd; }
+      .form-success-icon {
+        width: 40px; height: 40px; border-radius: 10px;
+        display: grid; place-items: center; margin-bottom: 10px;
+        background: linear-gradient(180deg, #6aa4ff, #4b8dff); color: #07152e; font-weight: 800;
+      }
+      .form-error { border-color: rgba(255, 99, 99, 0.25); }
+      
+      /* Video overlay topbar styles for course page */
+      #video-overlay .video-topbar {
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 12px;
+        align-items: center;
+        padding: 12px 12px 8px;
+        padding-top: calc(10px + env(safe-area-inset-top));
+        background: rgba(0,0,0,.65);
+        backdrop-filter: blur(6px);
+        z-index: 101;
+      }
+      #video-overlay .video-topbar a,
+      #video-overlay .video-topbar button {
+        appearance: none; -webkit-appearance: none; border: 0;
+        border-radius: 12px; padding: 12px 16px; font-weight: 800;
+        font-family: inherit; font-size: 16px; line-height: 1;
+      }
+      #video-overlay .video-topbar-linkedin { background: #0a66c2; color: #fff; box-shadow: 0 8px 22px rgba(10,102,194,.36); text-align: center; }
+      #video-overlay .video-topbar-close { background: #0f172a; color: #fff; box-shadow: 0 8px 22px rgba(15,23,42,.28); }
+      #video-overlay .video-close { display: none; }
+      #video-overlay .video-footer { display: none; }
+      
+      @media (max-width: 768px) {
+        .course-features {
+          grid-template-columns: 1fr;
+        }
+        
+        .course-outcomes-list {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="af5b3e73-75a7-46c2-92c6-9abda7c67bf0"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../" aria-label="Avanai home">
+          <img src="../images/logo.png" alt="Avanai" class="brand-logo" />
+        </a>
+        <nav class="main-nav" aria-label="Primary">
+          <a href="../#challenges">Challenges We Solve</a>
+          <a href="../#how">How We Help</a>
+          <a href="/about/">About Us</a>
+        </nav>
+        <a class="btn btn-primary header-cta" href="/contact">Get in Touch</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
+        <a href="../index.html#challenges">Challenges We Solve</a>
+        <a href="../index.html#how">How We Help</a>
+        <a href="/about/">About Us</a>
+        <a class="btn btn-primary" href="/contact">Get in Touch</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero course-hero">
+        <div class="container hero-inner course-hero-inner">
+          <p class="eyebrow course-eyebrow">🚀 Free Crash Course</p>
+          <h1 class="course-title">n8n & Vibe Coding Crash Course</h1>
+          <p class="course-subtitle">
+            Learn how to combine automation, AI voice agents, and vibe coding to build real-world applications from scratch, even if you've never written a line of code before! It is beginner friendly and you will learn by doing.
+          </p>
+          
+          <div class="course-features">
+            <div class="course-feature">
+              <h3><span class="course-feature-icon">1</span>n8n Fundamentals to Advanced</h3>
+              <p>From beginner basics to building production-ready workflows that actually work in the real world.</p>
+            </div>
+            <div class="course-feature">
+              <h3><span class="course-feature-icon">2</span>AI Voice Agent with ElevenLabs</h3>
+              <p>Build a complete lead qualification system: form → voice AI call → email fallback → automatic booking. Inspired by Alex Hormozi's 60-Second Hack.</p>
+            </div>
+            <div class="course-feature">
+              <h3><span class="course-feature-icon">3</span>Vibe Coding with Claude</h3>
+              <p>Shift into web development mode using Next.js, TypeScript, and modern development practices to create scalable applications.</p>
+            </div>
+            <div class="course-feature">
+              <h3><span class="course-feature-icon">4</span>Supabase and PostgreSQL</h3>
+              <p>Master modern database management with Supabase's powerful backend-as-a-service platform and PostgreSQL for real-time data handling.</p>
+            </div>
+          </div>
+          
+          <div class="course-outcomes">
+            <h3>By the end, you'll know how to:</h3>
+            <ul class="course-outcomes-list">
+              <li>Automate lead qualification with n8n</li>
+              <li>Enrich data using voice + email AI workflows</li>
+              <li>Build and deploy a web app with Next.js + Supabase</li>
+              <li>Apply vibe coding principles to ship fast with Claude Code</li>
+            </ul>
+          </div>
+          
+          <div class="course-target-audience">
+            <h3>Who is this for?</h3>
+            <p>Whether you're a complete beginner, an entrepreneur, or someone curious about AI, this playlist is designed to help you become an AI Builder / AI-Native Developer without needing a programming background.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-form-section">
+        <div class="container contact-form-container">
+          <div class="contact-form-wrapper">
+            <form class="contact-form" action="https://aemal.app.n8n.cloud/webhook/1b3cb523-4ba4-43cc-917e-3be1e85fca4e" method="POST">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName" class="form-label">First Name *</label>
+                  <input type="text" id="firstName" name="firstName" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label for="lastName" class="form-label">Last Name *</label>
+                  <input type="text" id="lastName" name="lastName" class="form-input" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input type="email" id="email" name="email" class="form-input" required 
+                         pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                         title="Please enter a valid email address (e.g., user@example.com)">
+                </div>
+                <div class="form-group">
+                  <label for="phoneNumber" class="form-label">Phone Number</label>
+                  <input type="tel" id="phoneNumber" name="phoneNumber" class="form-input" placeholder="Your Phone Number">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="companyName" class="form-label">Company/Organization Name</label>
+                  <input type="text" id="companyName" name="companyName" class="form-input" placeholder="e.g., Avanai GmbH, Freelancer, Student">
+                </div>
+                <div class="form-group">
+                  <label for="organizationSize" class="form-label">Organization Size (Total Employees) *</label>
+                  <select id="organizationSize" name="organizationSize" class="form-select" required>
+                    <option value="">Select organization size</option>
+                    <option value="1-10">1-10 employees</option>
+                    <option value="11-50">11-50 employees</option>
+                    <option value="51-200">51-200 employees</option>
+                    <option value="201-500">201-500 employees</option>
+                    <option value="501-1000">501-1,000 employees</option>
+                    <option value="1001-5000">1,001-5,000 employees</option>
+                    <option value="5000+">5,000+ employees</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="currentRole" class="form-label">Current Role/Position *</label>
+                  <input type="text" id="currentRole" name="currentRole" class="form-input" placeholder="e.g., Entrepreneur, Developer, Student, Business Owner" required>
+                </div>
+                <div class="form-group">
+                  <label for="experienceLevel" class="form-label">Coding Experience Level *</label>
+                  <select id="experienceLevel" name="experienceLevel" class="form-select" required>
+                    <option value="">Select your experience level</option>
+                    <option value="complete-beginner">Complete Beginner (Never coded before)</option>
+                    <option value="some-experience">Some Experience (Basic HTML/CSS or similar)</option>
+                    <option value="intermediate">Intermediate (Can build simple apps)</option>
+                    <option value="advanced">Advanced (Professional developer)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="linkedinProfile" class="form-label">LinkedIn Profile *</label>
+                  <input type="url" id="linkedinProfile" name="linkedinProfile" class="form-input" placeholder="https://linkedin.com/in/yourprofile" required>
+                </div>
+                <div class="form-group">
+                  <label for="hearAboutUs" class="form-label">How did you hear about this course? *</label>
+                  <select id="hearAboutUs" name="hearAboutUs" class="form-select" required>
+                    <option value="">Select an option</option>
+                    <option value="youtube">YouTube</option>
+                    <option value="linkedin">LinkedIn</option>
+                    <option value="twitter">Twitter/X</option>
+                    <option value="friend-referral">Friend/Colleague Referral</option>
+                    <option value="google-search">Google Search</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="goals" class="form-label">What are you hoping to achieve with automation and AI? *</label>
+                <textarea id="goals" name="goals" class="form-textarea" rows="4" required placeholder="Tell us about your goals, current challenges, or what you're hoping to build. This helps us understand how to best support your learning journey."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-checkbox-label">
+                  <input type="checkbox" id="followLinkedIn" name="followLinkedIn" class="form-checkbox" value="yes">
+                  <span class="form-checkbox-text">Yes, I would like to follow <a href="https://www.linkedin.com/company/avanai/" target="_blank" rel="noopener" class="linkedin-link">Avanai LinkedIn page</a> to stay updated about upcoming free n8n courses.</span>
+                </label>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-lg">Get Access to Free Course 🚀</button>
+              </div>
+            </form>
+            <div id="formSuccess" class="form-success" hidden>
+              <div class="form-success-icon">🚀</div>
+              <h3>Welcome to the Course!</h3>
+              <p>Your registration was successful. You'll be redirected to the course playlist in a moment.</p>
+              <div class="form-actions">
+                <a class="btn btn-primary" href="https://www.youtube.com/playlist?list=PLWYu7XaUG3XOvD-BmMNniEYCDubAAsHnB" target="_blank">Go to Course Now</a>
+              </div>
+            </div>
+            <div id="formError" class="form-error" hidden>
+              <p>We couldn't process your registration right now. Please try again in a moment.</p>
+            </div>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-info-card">
+              <h3 class="contact-info-title">Ready to Become an AI Builder?</h3>
+              <p class="contact-info-description">
+                This comprehensive crash course will take you from zero to building production-ready AI applications. 
+                You'll learn by doing, with real projects that you can use immediately in your own work or business.
+              </p>
+              
+              <div class="contact-highlights">
+                <div class="contact-highlight">
+                  <div class="contact-highlight-number">Free</div>
+                  <div class="contact-highlight-text">Complete Course</div>
+                </div>
+                <div class="contact-highlight">
+                  <div class="contact-highlight-number">Voice AI</div>
+                  <div class="contact-highlight-text">Major Projects</div>
+                </div>
+                <div class="contact-highlight">
+                  <div class="contact-highlight-number">Zero</div>
+                  <div class="contact-highlight-text">Coding Required</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <h3 class="footer-title">Avanai GmbH</h3>
+          <p class="footer-description">Reimagine work. With AI agents and automation that deliver results, not surprises.</p>
+          <a class="imprint-link" href="/imprint">Imprint</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating promo video trigger -->
+    <button id="video-fab" class="video-fab" aria-haspopup="dialog" aria-controls="video-overlay" aria-label="Play intro video">
+      <img src="../images/promo.png" alt="Watch our short intro" />
+    </button>
+
+    <!-- Video overlay -->
+    <div id="video-overlay" class="video-overlay" role="dialog" aria-modal="true" aria-labelledby="video-title" aria-hidden="true">
+      <div class="video-backdrop" data-close></div>
+        <div class="video-panel" role="document">
+          <button class="video-close" aria-label="Close video" data-close>
+            <span aria-hidden="true">×</span>
+          </button>
+          <div class="video-topbar">
+            <a class="video-topbar-linkedin" href="https://www.linkedin.com/in/chvoigt/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+            <button class="video-topbar-close" type="button" data-close aria-label="Close video">Close</button>
+          </div>
+          <div class="video-frame-wrap">
+            <iframe id="video-iframe" title="Avanai promo" width="560" height="315" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen
+              src="" data-src="https://www.youtube.com/embed/oyGUYZIdg7I?autoplay=1&rel=0&modestbranding=1&playsinline=1&controls=0&iv_load_policy=3&showinfo=0"></iframe>
+          </div>
+          <div class="video-footer">
+            <a class="video-linkedin" href="https://www.linkedin.com/in/chvoigt/" target="_blank" rel="noopener" aria-label="Connect with Christian Voigt on LinkedIn">
+              <span>Connect on LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Enhanced form handling for course registration
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('.contact-form');
+        const successMessage = document.getElementById('formSuccess');
+        const errorMessage = document.getElementById('formError');
+        const emailInput = document.getElementById('email');
+
+        // Email validation function
+        function isValidEmail(email) {
+          const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+          return emailRegex.test(email);
+        }
+
+        // Real-time email validation
+        if (emailInput) {
+          emailInput.addEventListener('blur', function() {
+            const email = this.value.trim();
+            if (email && !isValidEmail(email)) {
+              this.setCustomValidity('Please enter a valid email address (e.g., user@example.com)');
+              this.style.borderColor = '#ff6b6b';
+            } else {
+              this.setCustomValidity('');
+              this.style.borderColor = '';
+            }
+          });
+
+          emailInput.addEventListener('input', function() {
+            const email = this.value.trim();
+            if (email && isValidEmail(email)) {
+              this.setCustomValidity('');
+              this.style.borderColor = '#4ade80';
+            } else if (email) {
+              this.style.borderColor = '#ff6b6b';
+            } else {
+              this.style.borderColor = '';
+            }
+          });
+        }
+
+        if (form) {
+          form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Hide any existing messages
+            successMessage.hidden = true;
+            errorMessage.hidden = true;
+            
+            // Validate email before submission
+            const email = emailInput.value.trim();
+            if (!isValidEmail(email)) {
+              emailInput.focus();
+              emailInput.setCustomValidity('Please enter a valid email address');
+              emailInput.reportValidity();
+              return;
+            }
+            
+            // Get form data
+            const formData = new FormData(form);
+            
+            try {
+              const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData
+              });
+              
+              if (response.ok) {
+                // Hide form and show success message
+                form.style.display = 'none';
+                successMessage.hidden = false;
+                
+                // Redirect to YouTube playlist after 3 seconds
+                setTimeout(() => {
+                  window.open('https://www.youtube.com/playlist?list=PLWYu7XaUG3XOvD-BmMNniEYCDubAAsHnB', '_blank');
+                }, 3000);
+                
+              } else {
+                throw new Error('Form submission failed');
+              }
+            } catch (error) {
+              console.error('Form submission error:', error);
+              errorMessage.hidden = false;
+            }
+          });
+        }
+      });
+    </script>
+    <script src="../script.js"></script>
+  </body>
+</html>
