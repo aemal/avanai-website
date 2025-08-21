@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting to n8n Course — Avanai</title>
+    <meta name="description" content="Redirecting to the n8n & Vibe Coding Crash Course" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml" />
+    
+    <!-- Auto redirect after 3 seconds -->
+    <meta http-equiv="refresh" content="3;url=../n8n-and-vibe-coding-crash-course/">
+    
+    <style>
+      .redirect-hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 40px 20px;
+      }
+      
+      .redirect-content {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      
+      .redirect-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, #6aa4ff, #4b8dff);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 24px;
+        font-size: 36px;
+        animation: pulse 2s infinite;
+      }
+      
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(106, 164, 255, 0.7);
+        }
+        70% {
+          transform: scale(1.05);
+          box-shadow: 0 0 0 20px rgba(106, 164, 255, 0);
+        }
+        100% {
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(106, 164, 255, 0);
+        }
+      }
+      
+      .redirect-title {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 800;
+        line-height: 1.2;
+        color: #202020;
+        margin-bottom: 16px;
+      }
+      
+      .redirect-subtitle {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #64748b;
+        margin-bottom: 32px;
+      }
+      
+      .redirect-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+      }
+      
+      .countdown {
+        font-size: 14px;
+        color: #64748b;
+        margin-top: 16px;
+      }
+      
+      .countdown-number {
+        font-weight: 700;
+        color: #6aa4ff;
+      }
+      
+      @media (max-width: 768px) {
+        .redirect-actions {
+          width: 100%;
+        }
+        
+        .btn {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+    </style>
+    
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="af5b3e73-75a7-46c2-92c6-9abda7c67bf0"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="../" aria-label="Avanai home">
+          <img src="../images/logo.png" alt="Avanai" class="brand-logo" />
+        </a>
+        <nav class="main-nav" aria-label="Primary">
+          <a href="../#challenges">Challenges We Solve</a>
+          <a href="../#how">How We Help</a>
+          <a href="/about/">About Us</a>
+        </nav>
+        <a class="btn btn-primary header-cta" href="/contact">Get in Touch</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <nav id="mobile-menu" class="mobile-nav" aria-label="Mobile">
+        <a href="../index.html#challenges">Challenges We Solve</a>
+        <a href="../index.html#how">How We Help</a>
+        <a href="/about/">About Us</a>
+        <a class="btn btn-primary" href="/contact">Get in Touch</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="redirect-hero">
+        <div class="redirect-content">
+          <div class="redirect-icon">🚀</div>
+          <h1 class="redirect-title">Taking you to the n8n Course</h1>
+          <p class="redirect-subtitle">
+            You're being redirected to our comprehensive n8n & Vibe Coding Crash Course. 
+            Learn automation, AI voice agents, and modern development practices!
+          </p>
+          
+          <div class="redirect-actions">
+            <a class="btn btn-primary btn-lg" href="../n8n-and-vibe-coding-crash-course/">
+              Go to Course Now
+            </a>
+            <a class="btn btn-secondary" href="../">
+              Back to Home
+            </a>
+          </div>
+          
+          <div class="countdown">
+            Redirecting automatically in <span class="countdown-number" id="countdown">3</span> seconds...
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <h3 class="footer-title">Avanai GmbH</h3>
+          <p class="footer-description">Reimagine work. With AI agents and automation that deliver results, not surprises.</p>
+          <a class="imprint-link" href="/imprint">Imprint</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Countdown timer
+      let countdown = 3;
+      const countdownElement = document.getElementById('countdown');
+      
+      const timer = setInterval(() => {
+        countdown--;
+        if (countdownElement) {
+          countdownElement.textContent = countdown;
+        }
+        
+        if (countdown <= 0) {
+          clearInterval(timer);
+          // Redirect to the course page
+          window.location.href = '../n8n-and-vibe-coding-crash-course/';
+        }
+      }, 1000);
+      
+      // Track page view
+      if (typeof umami !== 'undefined') {
+        umami.track('n8n-redirect-page-view');
+      }
+    </script>
+    <script src="../script.js"></script>
+  </body>
+</html>
