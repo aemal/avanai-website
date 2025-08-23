@@ -1,0 +1,88 @@
+# Avanai
+
+> Enterprise-grade AI agents and automation that deliver measurable results. Reimagine work with AI agents and automation that deliver results, not surprises. We turn business challenges into automated solutions with 100% ROI in the first year.
+
+## Company Overview
+
+Avanai GmbH is an enterprise AI automation company founded in 2024, specializing in AI agents and intelligent automation solutions for large organizations. The company is built by automation experts with 15+ years of experience who have worked with 100+ clients including n8n, Siemens, Pepsi, Allianz, Klarna, DHL, and Sparkasse.
+
+## Core Services
+
+### AI Agents & Automation Strategy
+- **Ambition & Enablement**: Define AI & automation strategy, align priorities, identify high-impact use cases with real ROI, ensure compliance from day one
+- **Agent Factory**: Design and develop intelligent AI agents and automations tailored to workflows, processes, and business logic
+- **AI Agents & Automations Ops**: Operate and optimize AI agents & automations as a managed service to ensure peak performance
+- **Academy**: Build AI & automation literacy across organizations through executive workshops, technical training, and hands-on labs
+
+### Business Challenges We Solve
+- **AI Journey Confidence**: Help organizations start or scale AI initiatives with clear strategy and stakeholder alignment
+- **Decision Making**: Use AI to surface insights, flag risks, and recommend next steps for faster, confident decision-making
+- **Cost Reduction & Risk Mitigation**: Automate controls, reduce manual oversight, strengthen governance, cut costs, improve compliance
+- **Speed & Accuracy**: Automation-first approach to accelerate processes while reducing errors in high-stakes operations
+- **EU AI Act Compliance**: Frameworks to keep organizations compliant with new AI regulations and reduce legal risk
+- **Team Adoption**: Role-based training, certifications, and change management to drive AI adoption across organizations
+
+## Key Differentiators
+
+- **Outcome Guarantee**: Every deployment starts with a value case and ends with measurable impact
+- **Business-First AI**: Agents that improve business operations with clear flows and human handoff
+- **Trust & Control**: ISO 27001 mindset, EU-hosted options, no vendor lock-in, full transparency
+- **Enterprise-Ready**: Compliant with EU AI Act, GDPR, and enterprise security standards
+
+## Company Values
+
+- **Outcome-First**: Measure success by business impact, not technical complexity
+- **Trust & Transparency**: Full visibility into AI agent operations, customer data ownership, complete control
+- **Reliability Over Hype**: Production-grade solutions with fallback logic, human handoff, robust error handling
+- **Enterprise-Ready**: Scalable, compliant, and secure architectures
+
+## Target Market
+
+Enterprise organizations facing:
+- 90% of executives worried about hitting targets due to margin erosion and investor pressure
+- 76% rising urgency to cut costs from manual work and inefficient processes
+- 75% ranking digital transformation as top priority but blocked by overwhelming workloads
+
+## Key Statistics & Claims
+
+- 100% ROI guaranteed in the first year
+- 15+ years of team experience in AI and automation
+- 100+ enterprise clients served
+- Trusted by major brands: n8n, Siemens, Pepsi, Allianz, Klarna, DHL, Sparkasse
+- 24-hour response time for consultations
+
+## Website Structure
+
+### Main Pages
+- [Homepage](https://avanai.io/) - Main value proposition, services overview, client logos
+- [About Us](https://avanai.io/about/) - Team background, company values, differentiators
+- [Contact](https://avanai.io/contact/) - Contact form, consultation request, response guarantees
+
+### Specialized Pages
+- [n8n Partnership](https://avanai.io/n8n/) - n8n-specific automation solutions
+- [n8n & Vibe Coding Crash Course](https://avanai.io/n8n-and-vibe-coding-crash-course/) - Technical training content
+- [Legal/Imprint](https://avanai.io/imprint/) - Legal information and company details
+
+## Contact Information
+
+- **Website**: https://avanai.io
+- **Contact Page**: https://avanai.io/contact/
+- **LinkedIn**: https://www.linkedin.com/company/avanai/
+- **Video Introduction**: Featured on homepage with founder Christian Voigt
+- **Response Time**: 24-hour guaranteed response for inquiries
+- **Location**: Germany (German company - Avanai GmbH)
+
+## Technology Focus Areas
+
+- AI Agents and Intelligent Automation
+- Enterprise Process Automation
+- Workflow Optimization
+- Business Intelligence Automation
+- Digital Transformation
+- EU AI Act Compliance
+- n8n Automation Platform Expertise
+- Enterprise Integration Solutions
+
+## Industries Served
+
+Based on client portfolio: Financial Services (Allianz, Sparkasse, Klarna), Manufacturing (Siemens), Consumer Goods (Pepsi), Logistics (DHL), Technology (n8n), and other enterprise segments requiring scalable AI automation solutions.
