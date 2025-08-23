@@ -1,0 +1,35 @@
+# robots.txt for Avanai.io
+# This file tells search engine crawlers which pages they can crawl
+
+# Allow all search engines to crawl the entire website
+User-agent: *
+Allow: /
+
+# Block crawling of any admin or private directories (if they exist)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /.env
+Disallow: /config/
+
+# Block crawling of temporary or cache files
+Disallow: /tmp/
+Disallow: /cache/
+Disallow: /*.tmp$
+
+# Allow specific important files that crawlers should access
+Allow: /robots.txt
+Allow: /llms.txt
+Allow: /favicon.ico
+Allow: /images/
+Allow: /styles.css
+Allow: /script.js
+
+# Set crawl delay (optional - uncomment if needed)
+# Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://avanai.io/sitemap.xml
+
+# Note: This robots.txt allows search engines to index all your public content
+# including your main pages, about page, contact page, and n8n-related content
