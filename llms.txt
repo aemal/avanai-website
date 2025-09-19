@@ -62,6 +62,7 @@ Enterprise organizations facing:
 - [n8n Partnership](https://avanai.io/n8n/) - n8n-specific automation solutions
 - [n8n & Vibe Coding Crash Course](https://avanai.io/n8n-and-vibe-coding-crash-course/) - Technical training content
 - [Legal/Imprint](https://avanai.io/imprint/) - Legal information and company details
+- [Privacy Policy/Datenschutz](https://avanai.io/datenschutz/) - Privacy policy and data protection information
 
 ## Contact Information
 
