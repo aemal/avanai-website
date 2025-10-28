@@ -75,7 +75,7 @@ document.addEventListener('keydown', (e) => {
     const formData = new FormData(form);
     const payload = Object.fromEntries(formData.entries());
 
-    const endpoint = 'https://aemal.app.n8n.cloud/webhook/1b3cb523-4ba4-43cc-917e-3be1e85fca4e';
+    const endpoint = 'https://aemal.app.n8n.cloud/webhook/0d869ebf-1c86-44f9-8cd5-99d17142a7a9';
 
     if (submitButton) {
       submitButton.disabled = true;
